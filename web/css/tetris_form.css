@@ -1,0 +1,80 @@
+#div_all
+{
+    margin-top: 20px;
+}
+
+#side_area
+{
+    position: absolute;
+    margin-left: 10px;
+}
+
+#gamebox
+{
+    margin: auto;
+    border: 1px solid black;
+}
+
+#playbutton
+{
+    width: 100px;
+    height: 50px;
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color:blue;
+
+    background-color: white;
+    cursor: pointer;
+}
+#stopbutton
+{
+    width: 100px;
+    height: 50px;
+
+    margin-left: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+
+    background-color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+#score_box
+{
+    width: 210px;
+    height: 50px;
+
+    font-size: 20px;
+    color: black;
+
+    margin-top: 10px;
+    background-color: white;
+}
+
+#rank
+{
+    width: 210px;
+    margin-top: 20px;
+
+    border-collapse: collapse;
+}
+
+#more_rank
+{
+    width: 80px;
+    margin-top: 10px;
+    margin-left: 130px;
+
+    color: black;
+}
+
+input
+{
+    visibility: hidden;
+}
