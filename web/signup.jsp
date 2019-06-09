@@ -10,6 +10,8 @@
 
 <script>
 <%
+    request.setCharacterEncoding("UTF-8");
+
     if(request.getParameter("password").equals(request.getParameter("paassword_check")));
     else
         out.println("alert('비밀번호와 비밀번호 확인란의 값이 일치하지 않습니다.'); window.location.href='signup_form.jsp';");

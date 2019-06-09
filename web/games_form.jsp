@@ -1,9 +1,5 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: selab
-  Date: 2019-06-08
-  Time: 오전 1:56
-  To change this template use File | Settings | File Templates.
+  게임 선택 화면입니다.
 --%>
 <%@ page
     contentType="text/html;charset=UTF-8"
@@ -56,11 +52,14 @@
                 </div>
 
                 <div class="jumbotron">
-                    <img src="image/tetris.png" width="100"/>
-                    <h2 class="text-muted">??</h2>
-                    <p class="text-info">...하는 게임입니다.</p>
+                    <img src="image/breakout.png" width="100"/>
+                    <h2 class="text-muted">벽돌깨기</h2>
+                    <p class="text-info">공을 아래로 떨어지지 않게 막으면서 벽돌을 부수는 게임입니다.<br/>
+                        벽돌을 다 부쉈더라도 10초를 버티면 벽돌이 재생성됩니다.<br/>
+                        이동: 좌우 방향키
+                    </p>
                     <p>
-                        <a class="btn btn-lg btn-primary" href="" role="button">하러가기 &raquo;</a>
+                        <a class="btn btn-lg btn-primary" href="breakout.jsp" role="button">하러가기 &raquo;</a>
                     </p>
                 </div>
             </div>

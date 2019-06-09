@@ -19,7 +19,7 @@ public class DBController
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + dbname + "?useSSL=false", db_username, db_password);
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + dbname + "?useSSL=false&useUnicode=true&characterEncoding=utf8", db_username, db_password);
             is_connected = true;
         }
         catch(Exception e)

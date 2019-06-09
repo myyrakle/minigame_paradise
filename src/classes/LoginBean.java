@@ -57,13 +57,16 @@ public class LoginBean
 
             try
             {
-                var statement = db.getPreparedStatement("select password from user_table where username=?");
+                var statement = db.getPreparedStatement("select password, username from user_table where username=?");
                 statement.setString(1, username);
                 var result = statement.executeQuery();
 
                 if(result.next())
                 {
-                    if(password.equals(result.getString("password"))) //비밀번호 맞음
+                    String in_db_password = result.getString("password");
+
+
+                    if(password.equals(in_db_password)) //비밀번호 맞음
                         return true;
                     else //비밀번호 틀림
                         return false;

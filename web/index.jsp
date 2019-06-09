@@ -1,5 +1,3 @@
-<%@ page import="classes.LoginBean" %>
-<%@ page import="classes.DBController" %>
 <%@ page
     contentType="text/html;charset=UTF-8"
     language="java"

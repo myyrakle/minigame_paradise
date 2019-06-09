@@ -22,7 +22,7 @@
 
     <body>
         <div class="container">
-            <form class="form-signin" method="POST" action="">
+            <form class="form-signin" method="POST" action="signup.jsp">
                 <h2 class="form-signin-heading">사용자명과 비밀번호를 등록해주세요</h2>
 
                 <label for="username" class="sr-only">사용자명</label>

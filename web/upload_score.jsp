@@ -5,6 +5,8 @@
 %>
 
 <%
+    request.setCharacterEncoding("UTF-8");
+
     RankBean.setScore(request.getParameter("gamename"),
             request.getParameter("username"),
             Integer.parseInt(request.getParameter("score")));

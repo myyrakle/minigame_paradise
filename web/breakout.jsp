@@ -1,27 +1,26 @@
 <%--
-  테트리스 게임화면입니다.
+  벽돌깨기 게임화면입니다.
 --%>
 <%@ page
-    contentType="text/html;charset=UTF-8"
-    language="java"
-    import="classes.RankBean"
+        contentType="text/html;charset=UTF-8"
+        language="java"
+        import="classes.RankBean"
 %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0037)http://bootstrapk.com/examples/cover/ -->
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-        <title>극락 테트리스</title>
+        <link rel="stylesheet" href="css/breakout_form.css"/>
+        <title>극락 벽돌깨기</title>
 
         <!-- Custom styles for this template -->
         <link href="./css/cover.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/tetris_form.css"/>
 
     </head>
-
     <body>
         <audio id="clearsound" src="./sound/pop.ogg" preload="auto"></audio>
 
@@ -42,13 +41,13 @@
                     </div>
 
                     <div class="inner cover">
-                        <br/><br/><br/><br/><br/><br/><br/>
+                        <br/><br/><br/>
                         <div id = "div_all" align="center">
-                            <canvas id="gamebox" width="300" height="600"></canvas>
+                            <canvas id="canvas" width="480" height="320"></canvas>
 
                             <span id = "side_area" align="left">
-                                <button id="playbutton" onclick="playButtonClicked();">Play</button>
-                                <button id="stopbutton" onclick="stopButtonClicked();" disabled>Stop</button>
+                                <button id="playbutton" onclick="onPlayButtonClicked();">Play</button>
+                                <button id="stopbutton" onclick="onStopButtonClicked();" disabled>Stop</button>
                                 <br/>
                                 <button id="score_box" disabled>점수: 0</button>
                                 <br>
@@ -58,12 +57,12 @@
                                         <tr align="center">
                                             <td>순위</td> <td>점수</td> <td>이름</td>
                                         </tr>
-                                        <%=RankBean.getTop10Table("tetris")%>
+                                        <%=RankBean.getTop10Table("breakout")%>
                                     </table>
-                                    <button id="more_rank" onclick="window.location.href='ranking.jsp?gamename=tetris'">더 보기</button>
+                                    <button id="more_rank" onclick="window.location.href='ranking.jsp?gamename=breakout'">더 보기</button>
                                 </span>
                                 <form id="upload_form" name="upload_form" method="post" action="upload_score.jsp">
-                                    <input id="gamename" name="gamename" type="hidden" value="tetris"/>
+                                    <input id="gamename" name="gamename" type="hidden" value="breakout"/>
                                     <input id="username" name="username" type="hidden" value="<%=session.getAttribute("username")%>"/>
                                     <input id="score" name="score" type="hidden" value="0"/>
                                 </form>
@@ -91,8 +90,7 @@
         }
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src='js/tetris/tetris.js'></script>
-    <script src='js/tetris/render.js'></script>
-    <script src='js/tetris/control.js'></script>
+    <script src="js/breakout/breakout_.js"></script>
+    <script src="./js/breakout/user_control.js"></script>
 
 </html>

@@ -9,6 +9,10 @@
     import = "classes.LoginBean"
 %>
 
+<%
+    request.setCharacterEncoding("UTF-8");
+%>
+
 <jsp:useBean id="loginer" class="classes.LoginBean" scope="page"/>
 <jsp:setProperty name="loginer" property="*"/>
 
@@ -18,8 +22,10 @@
     loginer.setUsername(request.getParameter("username"));
     loginer.setPassword(request.getParameter("password"));*/
 
-    try {
-        if (loginer.check()) {
+    try
+    {
+        if (loginer.check())
+        {
             session.setAttribute("username", loginer.getUsername());
             response.sendRedirect("index.jsp");
         } else

@@ -27,28 +27,6 @@ public class RankBean
         }
     }
 
-    public static ResultSet getRank(String gamename)
-    {
-        var db = new DBController();
-
-        db.connect();
-
-        try
-        {
-            var statement = db.getPreparedStatement("select * from "+gamename+"_rank "+"order by score");
-            return statement.executeQuery();
-        }
-        catch (SQLException e)
-        {
-            e.printStackTrace();
-            return null;
-        }
-        finally
-        {
-            db.disconnect();
-        }
-    }
-
     public static String getTop10Table(String gamename)
     {
         var db = new DBController();
