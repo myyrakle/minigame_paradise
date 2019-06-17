@@ -52,6 +52,8 @@ let broken_count = 0;
 //벽돌을 초기화합니다.
 function initBricks()
 {
+    broken_count = 0;
+
     speedup();
 
     for(let c = 0; c<brickColumnCount; c++)
